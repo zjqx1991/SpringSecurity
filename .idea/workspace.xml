@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/BeanConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/mapper/IDemoUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/pojo/DemoUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoUserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-demo/src/test/java/com/raven/demo/DemoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/web/controller/DemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/web/controller/DemoController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -76,8 +88,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="DemoTest.getMenuUrlsList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="security-demo" />
       <extension name="coverage">
         <pattern>
@@ -85,6 +97,80 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.raven.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.raven.demo.DemoTest" />
+      <option name="METHOD_NAME" value="getMenuUrlsList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoTest.getMenuUrlsListByRoles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.raven.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.raven.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.raven.demo.DemoTest" />
+      <option name="METHOD_NAME" value="getMenuUrlsListByRoles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoTest.getRoleCodeList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.raven.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.raven.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.raven.demo.DemoTest" />
+      <option name="METHOD_NAME" value="getRoleCodeList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoTest.getRoleIdList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.raven.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.raven.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.raven.demo.DemoTest" />
+      <option name="METHOD_NAME" value="getRoleIdList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoTest.getUserInfo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="security-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.raven.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.raven.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.raven.demo.DemoTest" />
+      <option name="METHOD_NAME" value="getUserInfo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="security-demo" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.raven.demo.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,7 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.DemoApplication" />
+        <item itemvalue="JUnit.DemoTest.getMenuUrlsListByRoles" />
+        <item itemvalue="JUnit.DemoTest.getMenuUrlsList" />
+        <item itemvalue="JUnit.DemoTest.getRoleCodeList" />
+        <item itemvalue="JUnit.DemoTest.getRoleIdList" />
+        <item itemvalue="JUnit.DemoTest.getUserInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +196,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588492418035</updated>
-      <workItem from="1588492422321" duration="9737000" />
+      <workItem from="1588492422321" duration="15823000" />
     </task>
     <servers />
   </component>
@@ -146,6 +236,21 @@
           <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/security/spring-security-core/5.0.11.RELEASE/spring-security-core-5.0.11.RELEASE-sources.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.java</url>
           <line>71</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-demo/src/test/java/com/raven/demo/DemoTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-demo/src/test/java/com/raven/demo/DemoTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-demo/src/test/java/com/raven/demo/DemoTest.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
