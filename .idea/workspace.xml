@@ -2,25 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/DemoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/public/aftersignout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/public/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/templates/biz1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/templates/biz2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/templates/syslog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/templates/sysuser.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/DemoApplication.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588492418035</updated>
-      <workItem from="1588492422321" duration="5463000" />
+      <workItem from="1588492422321" duration="9737000" />
     </task>
     <servers />
   </component>
@@ -139,5 +123,31 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/security/spring-security-web/5.0.11.RELEASE/spring-security-web-5.0.11.RELEASE-sources.jar!/org/springframework/security/web/authentication/preauth/j2ee/J2eeBasedPreAuthenticatedWebAuthenticationDetailsSource.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/security/spring-security-web/5.0.11.RELEASE/spring-security-web-5.0.11.RELEASE-sources.jar!/org/springframework/security/web/authentication/preauth/websphere/WebSpherePreAuthenticatedWebAuthenticationDetailsSource.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/security/spring-security-core/5.0.11.RELEASE/spring-security-core-5.0.11.RELEASE-sources.jar!/org/springframework/security/authentication/dao/DaoAuthenticationProvider.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
