@@ -12,10 +12,13 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-//        http.httpBasic() // 配置弹窗登录界面
-        http.formLogin()
+        http.csrf().disable()
+                .formLogin()
+                .loginPage("/bw-login.html")    // 自定义登录界面
+                .loginProcessingUrl("/authentication/form") // 默认处理的/login，自定义登录界面需要指定请求路径
                 .and()
                 .authorizeRequests()
+                .antMatchers("/bw-login.html").permitAll()
                 .anyRequest()
                 .authenticated();
     }
