@@ -1,0 +1,49 @@
+server:
+  port: 8001
+  servlet:
+    session:
+      timeout: 10s
+      cookie:
+        http-only: true
+        secure: false
+
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3306/security?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: admin
+#    driver-class-name: com.mysql.jdbc.Driver
+#  freemarker:
+#    cache: false # 缓存配置 开发阶段应该配置为false 因为经常会改
+#    suffix: .html # 模版后缀名 默认为ftl
+#    charset: UTF-8 # 文件编码
+#    template-loader-path: classpath:/templates/
+
+#logging:
+#    config: classpath:log4j2-dev.xml
+
+mybatis:
+    configuration:
+      mapUnderscoreToCamelCase: true
+
+raven:
+  security:
+    browser:
+#      loginPage: /demo-login.html
+      loginType: JSON
+    code:
+      image:
+        length: 6
+        width: 100
+        urls:
+          - /syslog
+          - /user/*
+    social:
+      qq:
+        appId: 101386962
+        appSecret: 2a0f820407df400b84a854d054be8b6a
+#        app-id: 100550231
+#        app-secret: 69b6ab57b22f3c2fe6a6149274e3295e

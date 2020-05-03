@@ -11,5 +11,12 @@
 
     <artifactId>security-demo</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.raven</groupId>
+            <artifactId>security-browser</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
