@@ -14,9 +14,14 @@ public class RavenImageValidateCodeProperties {
      *  raven_width：参数来改变图形验证码的宽
      *  raven_height：参数来改变图形验证码的高
      */
+    // 图形验证码宽
     private int width = 67;
+    // 图形验证码高
     private int height = 23;
+    // 图形验证码个数
     private int length = 6;
+    // 图形验证码过期时间
     private int expireIn = 60;
+    // 需要验证的url
     private List validateUrls = new ArrayList();
 }

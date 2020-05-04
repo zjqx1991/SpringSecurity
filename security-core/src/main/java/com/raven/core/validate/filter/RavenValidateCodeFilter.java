@@ -4,8 +4,6 @@ import com.raven.core.constants.RavenSecurityConstants;
 import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.core.validate.exception.RavenValidateCodeException;
 import com.raven.core.validate.pojo.ImageCode;
-import com.sun.javadoc.SourcePosition;
-import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -2,26 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/validate/RavenImageValidateCodeProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/validate/RavenValidateCodeProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenValidateCodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/impl/DefaultRavenValidateCodeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoRavenValidateCodeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/authentication/BrowserAuthenticationFailureHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/authentication/BrowserAuthenticationFailureHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/authentication/BrowserAuthenticationSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/authentication/BrowserAuthenticationSuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/controller/BrowserSecurityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/controller/BrowserSecurityController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/public/bw-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/public/bw-login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/RavenSecurityProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/RavenSecurityProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/browser/BrowserProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/browser/RavenBrowserProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenBeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenBeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/validate/RavenImageValidateCodeProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/validate/RavenImageValidateCodeProperties.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/controller/RavenValidateCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/controller/RavenValidateCodeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenValidateCodeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenValidateCodeFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/RavenSecurityProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/RavenSecurityProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/browser/BrowserProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/config/RavenBeanConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/config/RavenBeanConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/validate/RavenImageValidateCodeProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/validate/RavenImageValidateCodeProperties.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/controller/RavenValidateCodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/controller/RavenValidateCodeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/filter/RavenValidateCodeFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/filter/RavenValidateCodeFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +202,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588492418035</updated>
       <workItem from="1588492422321" duration="42893000" />
-      <workItem from="1588578523270" duration="10796000" />
+      <workItem from="1588578523270" duration="13956000" />
     </task>
     <servers />
   </component>
@@ -267,16 +259,6 @@
           <url>file://$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java</url>
           <line>12</line>
           <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenValidateCodeFilter.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenValidateCodeFilter.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
