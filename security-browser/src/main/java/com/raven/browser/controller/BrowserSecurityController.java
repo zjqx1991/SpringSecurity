@@ -1,7 +1,7 @@
 package com.raven.browser.controller;
 
-import com.raven.browser.pojo.R;
 import com.raven.core.properties.RavenSecurityProperties;
+import com.raven.core.response.RavenR;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +46,7 @@ public class BrowserSecurityController {
      */
     @RequestMapping("/authentication/require")
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
-    public R requireAuthentication(HttpServletRequest request, HttpServletResponse response)
+    public RavenR requireAuthentication(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
 
         SavedRequest savedRequest = requestCache.getRequest(request, response);
@@ -60,6 +60,6 @@ public class BrowserSecurityController {
                 redirectStrategy.sendRedirect(request, response, loginPage);
             }
         }
-        return new R("访问的服务需要身份认证，请引导用户到登录页");
+        return new RavenR("访问的服务需要身份认证，请引导用户到登录页");
     }
 }

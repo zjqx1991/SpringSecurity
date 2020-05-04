@@ -3,6 +3,7 @@ package com.raven.browser.authentication;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.raven.core.enums.RavenLoginType;
 import com.raven.core.properties.RavenSecurityProperties;
+import com.raven.core.response.RavenR;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
+import static javafx.scene.input.KeyCode.R;
 
 @Component
 public class BrowserAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
@@ -35,7 +38,7 @@ public class BrowserAuthenticationFailureHandler extends SimpleUrlAuthentication
 
             response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
             response.setContentType("application/json;charset=UTF-8");
-            response.getWriter().write(this.objectMapper.writeValueAsString(exception));
+            response.getWriter().write(this.objectMapper.writeValueAsString(new RavenR(exception.getMessage())));
         }
         else {
             super.onAuthenticationFailure(request, response, exception);

@@ -32,7 +32,7 @@ mybatis:
 raven:
   security:
     browser:
-      loginPage: /demo-login.html
+#      loginPage: /demo-login.html
       loginType: JSON
 #    code:
 #      image:
