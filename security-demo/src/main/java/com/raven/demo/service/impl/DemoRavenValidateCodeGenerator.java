@@ -9,7 +9,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-@Component("imageValidateCodeGenerator")
+//@Component("imageValidateCodeGenerator")
 public class DemoRavenValidateCodeGenerator implements IRavenValidateCodeGenerator {
 
     @Override

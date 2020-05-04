@@ -36,7 +36,7 @@ raven:
       loginType: JSON
     validate:
       image:
-        length: 6
+        length: 3
         width: 100
         validateUrls:
           - /syslog
