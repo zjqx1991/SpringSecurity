@@ -1,5 +1,6 @@
 package com.raven.core.properties.browser;
 
+import com.raven.core.enums.RavenLoginType;
 import lombok.Data;
 
 /**
@@ -8,4 +9,5 @@ import lombok.Data;
 @Data
 public class BrowserProperties {
     private String loginPage = "/bw-login.html";
+    private RavenLoginType loginType = RavenLoginType.JSON;
 }

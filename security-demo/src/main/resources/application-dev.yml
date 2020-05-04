@@ -29,11 +29,11 @@ mybatis:
     configuration:
       mapUnderscoreToCamelCase: true
 
-#raven:
-#  security:
-#    browser:
-#      loginPage: /demo-login.html
-#      loginType: JSON
+raven:
+  security:
+    browser:
+      loginPage: /demo-login.html
+      loginType: JSON
 #    code:
 #      image:
 #        length: 6
