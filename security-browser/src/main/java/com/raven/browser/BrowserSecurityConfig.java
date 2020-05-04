@@ -23,6 +23,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private BrowserAuthenticationFailureHandler browserAuthenticationFailureHandler;
 
+    @Autowired
+    private RavenValidateCodeFilter validateCodeFilter;
 
 
     @Override
@@ -30,12 +32,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
         // 配置登录界面
         String loginPage = this.securityProperties.getBrowser().getLoginPage();
 
-        // 图形验证码过滤器
-        RavenValidateCodeFilter imagecodeFilter = new RavenValidateCodeFilter();
-        imagecodeFilter.setFailureHandler(this.browserAuthenticationFailureHandler);
-
         http.csrf().disable()
-                .addFilterBefore(imagecodeFilter, UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(this.validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin()
                 .loginPage("/authentication/require")    // 当需要身份认证时，跳转到这里
                 .loginProcessingUrl("/authentication/form") // 默认处理的/login，自定义登录界面需要指定请求路径

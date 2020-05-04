@@ -1,11 +1,13 @@
 package com.raven.core.validate.controller;
 
 import com.raven.core.constants.RavenSecurityConstants;
+import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.core.validate.pojo.ImageCode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.social.connect.web.HttpSessionSessionStrategy;
 import org.springframework.social.connect.web.SessionStrategy;
+import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.ServletWebRequest;
 
@@ -25,6 +27,9 @@ public class RavenValidateCodeController {
      */
     private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
 
+    @Autowired
+    private RavenSecurityProperties securityProperties;
+
     @GetMapping("/code/image")
     public void createCode(HttpServletRequest request, HttpServletResponse response) throws Exception {
         // 生成图片
@@ -39,10 +44,10 @@ public class RavenValidateCodeController {
     public ImageCode generator(ServletWebRequest request) {
         // 首先从请求参数中获取验证码的宽度，如果没有则使用配置的值
         // 这里是实现了验证码参数的三级可配：请求级>应用级>默认配置
-        int current_width = 100;//ServletRequestUtils.getIntParameter(request.getRequest(), "width", securityProperties.getCode().getImage().getWidth());
-        int current_height = 30;//ServletRequestUtils.getIntParameter(request.getRequest(), "height", securityProperties.getCode().getImage().getHeight());
-        int current_length = 4;//securityProperties.getCode().getImage().getLength();
-        int expireIn = 60;//securityProperties.getCode().getImage().getExpireIn();
+        int current_width = ServletRequestUtils.getIntParameter(request.getRequest(), "raven_width", securityProperties.getValidate().getImage().getWidth());
+        int current_height = ServletRequestUtils.getIntParameter(request.getRequest(), "raven_height", securityProperties.getValidate().getImage().getHeight());
+        int current_length = this.securityProperties.getValidate().getImage().getLength();
+        int expireIn = this.securityProperties.getValidate().getImage().getExpireIn();
         int width = current_width;
         int height = current_height;
         BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);

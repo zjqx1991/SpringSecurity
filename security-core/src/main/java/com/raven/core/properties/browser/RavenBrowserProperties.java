@@ -7,7 +7,7 @@ import lombok.Data;
  * 浏览器相关配置类
  */
 @Data
-public class BrowserProperties {
+public class RavenBrowserProperties {
     private String loginPage = "/bw-login.html";
     private RavenLoginType loginType = RavenLoginType.JSON;
 }
