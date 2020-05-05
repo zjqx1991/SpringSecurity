@@ -9,7 +9,6 @@ import com.raven.core.validate.service.impl.DefaultRavenMobileValidateCodeGenera
 import com.raven.core.validate.service.impl.DefaultRavenValidateCodeGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -57,8 +56,8 @@ public class RavenBeanConfig {
      * 发送手机短信
      */
     @Bean
-    @ConditionalOnMissingBean(name = "mobileCodeSendService")
-    IRavenMobileCodeSendService mobileCodeSendService() {
+    @ConditionalOnMissingBean(name = "mobileCodeSend")
+    IRavenMobileCodeSendService mobileCodeSend() {
         DefaultRavenMobileCodeSendServiceImpl mobileCodeSendImpl = new DefaultRavenMobileCodeSendServiceImpl();
         return mobileCodeSendImpl;
     }

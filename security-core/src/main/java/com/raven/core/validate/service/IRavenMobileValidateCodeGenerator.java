@@ -7,6 +7,7 @@ public interface IRavenMobileValidateCodeGenerator {
 
     /**
      * 生成验证码
+     * 请求注入名称为 "mobileValidateCodeGenerator"
      */
     RavenValidateCode generator(ServletWebRequest request);
 }
