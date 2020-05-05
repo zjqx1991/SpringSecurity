@@ -2,11 +2,13 @@ package com.raven.demo.service.impl;
 
 import com.raven.core.validate.pojo.RavenImageCode;
 import com.raven.core.validate.service.IRavenValidateCodeGenerator;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.Random;
+
 
 //@Component("imageValidateCodeGenerator")
 public class DemoRavenValidateCodeGenerator implements IRavenValidateCodeGenerator {
@@ -18,7 +20,7 @@ public class DemoRavenValidateCodeGenerator implements IRavenValidateCodeGenerat
         // 这里是实现了验证码参数的三级可配：请求级>应用级>默认配置
         int current_width = 200;
         int current_height = 30;
-        int current_length = 3;
+        int current_length = 9;
         int expireIn = 10;
         int width = current_width;
         int height = current_height;

@@ -70,7 +70,7 @@ public class RavenBeanConfig {
     }
 
     /**
-     * 手机短信验证码生成器
+     * 手机短信验证码处理器
      */
     @Bean
     @ConditionalOnMissingBean(name = "smsValidateCodeProcessor")

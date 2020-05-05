@@ -10,7 +10,7 @@ public class DemoMobileCodeSend implements IRavenMobileCodeSendService {
     private Logger logger = LoggerFactory.getLogger(getClass());
     @Override
     public void send(String mobile, String code) {
-        logger.info(mobile);
-        logger.info(code);
+        logger.info("Demo： " + mobile);
+        logger.info("Demo： " + code);
     }
 }
