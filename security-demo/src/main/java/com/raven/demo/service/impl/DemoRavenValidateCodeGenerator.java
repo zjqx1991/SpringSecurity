@@ -1,8 +1,7 @@
 package com.raven.demo.service.impl;
 
-import com.raven.core.validate.pojo.ImageCode;
+import com.raven.core.validate.pojo.RavenImageCode;
 import com.raven.core.validate.service.IRavenValidateCodeGenerator;
-import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
 import java.awt.*;
@@ -13,7 +12,7 @@ import java.util.Random;
 public class DemoRavenValidateCodeGenerator implements IRavenValidateCodeGenerator {
 
     @Override
-    public ImageCode generator(ServletWebRequest request) {
+    public RavenImageCode generator(ServletWebRequest request) {
 
         // 首先从请求参数中获取验证码的宽度，如果没有则使用配置的值
         // 这里是实现了验证码参数的三级可配：请求级>应用级>默认配置
@@ -51,7 +50,7 @@ public class DemoRavenValidateCodeGenerator implements IRavenValidateCodeGenerat
 
         g.dispose();
 
-        return new ImageCode(image, sRand, expireIn);
+        return new RavenImageCode(image, sRand, expireIn);
     }
 
     /**

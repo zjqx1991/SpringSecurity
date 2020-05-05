@@ -1,4 +1,4 @@
-package com.raven.core.mobile;
+package com.raven.core.validate.mobile;
 
 import lombok.Getter;
 import lombok.Setter;

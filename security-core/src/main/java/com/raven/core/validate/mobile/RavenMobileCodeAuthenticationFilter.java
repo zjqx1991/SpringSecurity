@@ -1,4 +1,4 @@
-package com.raven.core.mobile;
+package com.raven.core.validate.mobile;
 
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.security.core.Authentication;

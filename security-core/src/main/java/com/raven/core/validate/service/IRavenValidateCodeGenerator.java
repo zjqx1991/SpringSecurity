@@ -1,6 +1,6 @@
 package com.raven.core.validate.service;
 
-import com.raven.core.validate.pojo.ImageCode;
+import com.raven.core.validate.pojo.RavenImageCode;
 import org.springframework.web.context.request.ServletWebRequest;
 
 public interface IRavenValidateCodeGenerator {
@@ -8,5 +8,5 @@ public interface IRavenValidateCodeGenerator {
     /**
      * 生成图形验证码
      */
-    ImageCode generator(ServletWebRequest request);
+    RavenImageCode generator(ServletWebRequest request);
 }

@@ -5,4 +5,5 @@ import lombok.Getter;
 @Getter
 public class RavenValidateCodeProperties {
     RavenImageValidateCodeProperties image = new RavenImageValidateCodeProperties();
+    RavenMobileValidateCodeProperties mobile = new RavenMobileValidateCodeProperties();
 }

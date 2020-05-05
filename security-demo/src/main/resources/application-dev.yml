@@ -36,11 +36,13 @@ raven:
       loginType: JSON
     validate:
       image:
-        length: 3
+        count: 3
         width: 100
         validateUrls:
           - /syslog
           - /user/*
+      mobile:
+        count: 4
 #    social:
 #      qq:
 #        appId: 101386962

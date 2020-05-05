@@ -1,7 +1,7 @@
 package com.raven.core.validate.service.impl;
 
 import com.raven.core.properties.RavenSecurityProperties;
-import com.raven.core.validate.pojo.ImageCode;
+import com.raven.core.validate.pojo.RavenImageCode;
 import com.raven.core.validate.service.IRavenValidateCodeGenerator;
 import lombok.Setter;
 import org.springframework.web.bind.ServletRequestUtils;
@@ -20,13 +20,13 @@ public class DefaultRavenValidateCodeGenerator implements IRavenValidateCodeGene
     private RavenSecurityProperties securityProperties;
 
     @Override
-    public ImageCode generator(ServletWebRequest request) {
+    public RavenImageCode generator(ServletWebRequest request) {
 
         // 首先从请求参数中获取验证码的宽度，如果没有则使用配置的值
         // 这里是实现了验证码参数的三级可配：请求级>应用级>默认配置
         int current_width = ServletRequestUtils.getIntParameter(request.getRequest(), "raven_width", securityProperties.getValidate().getImage().getWidth());
         int current_height = ServletRequestUtils.getIntParameter(request.getRequest(), "raven_height", securityProperties.getValidate().getImage().getHeight());
-        int current_length = this.securityProperties.getValidate().getImage().getLength();
+        int current_count = this.securityProperties.getValidate().getImage().getCount();
         int expireIn = this.securityProperties.getValidate().getImage().getExpireIn();
         int width = current_width;
         int height = current_height;
@@ -45,11 +45,12 @@ public class DefaultRavenValidateCodeGenerator implements IRavenValidateCodeGene
             int y = random.nextInt(height);
             int xl = random.nextInt(12);
             int yl = random.nextInt(12);
-            g.drawLine(x, y, x + xl, y + yl);
+            g.drawLine(x
+                    , y, x + xl, y + yl);
         }
 
         String sRand = "";
-        for (int i = 0; i < current_length; i++) {
+        for (int i = 0; i < current_count; i++) {
             String rand = String.valueOf(random.nextInt(10));
             sRand += rand;
             g.setColor(new Color(20 + random.nextInt(110), 20 + random.nextInt(110), 20 + random.nextInt(110)));
@@ -58,7 +59,7 @@ public class DefaultRavenValidateCodeGenerator implements IRavenValidateCodeGene
 
         g.dispose();
 
-        return new ImageCode(image, sRand, expireIn);
+        return new RavenImageCode(image, sRand, expireIn);
     }
 
     /**

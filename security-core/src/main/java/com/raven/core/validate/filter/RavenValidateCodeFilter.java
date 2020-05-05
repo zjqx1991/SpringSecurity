@@ -3,7 +3,7 @@ package com.raven.core.validate.filter;
 import com.raven.core.constants.RavenSecurityConstants;
 import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.core.validate.exception.RavenValidateCodeException;
-import com.raven.core.validate.pojo.ImageCode;
+import com.raven.core.validate.pojo.RavenImageCode;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,7 +79,7 @@ public class RavenValidateCodeFilter extends OncePerRequestFilter implements Ini
 
     private void validate(ServletWebRequest request) throws ServletRequestBindingException {
 
-        ImageCode imageCode = (ImageCode) this.sessionStrategy.getAttribute(request, RavenSecurityConstants.SESSION_KEY_PREFIX);
+        RavenImageCode imageCode = (RavenImageCode) this.sessionStrategy.getAttribute(request, RavenSecurityConstants.SESSION_KEY_PREFIX);
 
         String codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "imageCode");
 

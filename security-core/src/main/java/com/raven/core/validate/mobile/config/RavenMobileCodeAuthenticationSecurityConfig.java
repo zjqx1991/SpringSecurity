@@ -1,7 +1,7 @@
-package com.raven.core.mobile.config;
+package com.raven.core.validate.mobile.config;
 
-import com.raven.core.mobile.RavenMobileCodeAuthenticationFilter;
-import com.raven.core.mobile.RavenMobileCodeAuthenticationProvider;
+import com.raven.core.validate.mobile.RavenMobileCodeAuthenticationFilter;
+import com.raven.core.validate.mobile.RavenMobileCodeAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;

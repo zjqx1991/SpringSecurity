@@ -1,7 +1,11 @@
 package com.raven.core.config;
 
 import com.raven.core.properties.RavenSecurityProperties;
+import com.raven.core.validate.service.IRavenMobileCodeSendService;
+import com.raven.core.validate.service.IRavenMobileValidateCodeGenerator;
 import com.raven.core.validate.service.IRavenValidateCodeGenerator;
+import com.raven.core.validate.service.impl.DefaultRavenMobileCodeSendServiceImpl;
+import com.raven.core.validate.service.impl.DefaultRavenMobileValidateCodeGenerator;
 import com.raven.core.validate.service.impl.DefaultRavenValidateCodeGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -24,6 +28,7 @@ public class RavenBeanConfig {
     }
 
     /**
+     * 图形验证码生成器
      * 由于IRavenValidateCodeGenerator这个接口是为了让外界实现，所以不能在它默认的实现类
      * DefaultRavenValidateCodeGenerator上直接使用@Component，防止会造成2个Bean，
      * 所以需要使用@ConditionalOnMissingBean(name = "imageValidateCodeGenerator")
@@ -35,5 +40,26 @@ public class RavenBeanConfig {
         DefaultRavenValidateCodeGenerator generator = new DefaultRavenValidateCodeGenerator();
         generator.setSecurityProperties(this.securityProperties);
         return generator;
+    }
+
+    /**
+     * 手机短信验证码生成器
+     */
+    @Bean
+    @ConditionalOnMissingBean(name = "mobileValidateCodeGenerator")
+    IRavenMobileValidateCodeGenerator mobileValidateCodeGenerator() {
+        DefaultRavenMobileValidateCodeGenerator generator = new DefaultRavenMobileValidateCodeGenerator();
+        generator.setSecurityProperties(this.securityProperties);
+        return generator;
+    }
+
+    /**
+     * 发送手机短信
+     */
+    @Bean
+    @ConditionalOnMissingBean(name = "mobileCodeSendService")
+    IRavenMobileCodeSendService mobileCodeSendService() {
+        DefaultRavenMobileCodeSendServiceImpl mobileCodeSendImpl = new DefaultRavenMobileCodeSendServiceImpl();
+        return mobileCodeSendImpl;
     }
 }
