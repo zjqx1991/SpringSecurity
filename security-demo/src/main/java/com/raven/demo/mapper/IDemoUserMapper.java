@@ -14,7 +14,7 @@ public interface IDemoUserMapper {
      * @param username 用户名称
      * @return 用户信息
      */
-    @Select("SELECT * FROM t_user WHERE username = #{username}")
+    @Select("SELECT * FROM t_user WHERE username = #{username} OR phone = #{username}")
     DemoUserDetails fetchUserInfoByUserName(@Param("username") String username);
 
 

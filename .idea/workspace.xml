@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeSend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenValidateCodeSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenMobileValidateCodeFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenBeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenBeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenMobileCodeSendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenMobileCodeSendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenMobileValidateCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenMobileValidateCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/config/RavenBeanConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/config/RavenBeanConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/controller/RavenValidateCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/controller/RavenValidateCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/controller/RavenValidateCodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/controller/RavenValidateCodeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/mapper/IDemoUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/mapper/IDemoUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeSend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/mapper/IDemoUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/mapper/IDemoUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoMobileCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoMobileCodeGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoMobileCodeSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoMobileCodeSend.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,11 +71,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.raven.core.config" />
+      <recent name="com.raven.core.validate.filter" />
       <recent name="com.raven.core.properties.validate" />
       <recent name="com.raven.core.validate.service.impl" />
       <recent name="com.raven.core.validate.pojo" />
-      <recent name="com.raven.core.validate.service" />
-      <recent name="com.raven.core.validate.exception" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/security-demo/src/main/resources" />
@@ -198,7 +204,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588492418035</updated>
       <workItem from="1588492422321" duration="42893000" />
-      <workItem from="1588578523270" duration="34529000" />
+      <workItem from="1588578523270" duration="39174000" />
     </task>
     <servers />
   </component>
@@ -270,16 +276,6 @@
           <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/social/spring-social-security/1.1.6.RELEASE/spring-social-security-1.1.6.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java</url>
           <line>160</line>
           <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/security/spring-security-web/5.0.11.RELEASE/spring-security-web-5.0.11.RELEASE-sources.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.java</url>
-          <line>212</line>
-          <option name="timeStamp" value="94" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/mobile/RavenMobileCodeAuthenticationFilter.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="96" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

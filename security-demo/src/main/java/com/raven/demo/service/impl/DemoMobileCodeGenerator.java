@@ -5,7 +5,7 @@ import com.raven.core.validate.service.IRavenMobileValidateCodeGenerator;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.ServletWebRequest;
 
-@Component("mobileValidateCodeGenerator")
+//@Component("mobileValidateCodeGenerator")
 public class DemoMobileCodeGenerator implements IRavenMobileValidateCodeGenerator {
     @Override
     public RavenValidateCode generator(ServletWebRequest request) {

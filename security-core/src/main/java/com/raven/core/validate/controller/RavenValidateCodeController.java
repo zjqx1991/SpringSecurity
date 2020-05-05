@@ -52,7 +52,7 @@ public class RavenValidateCodeController {
         // 生成验证码
         RavenValidateCode validateCode = this.mobileValidateCodeGenerator.generator(new ServletWebRequest(request, response));
         // 保存
-        sessionStrategy.setAttribute(new ServletWebRequest(request, response), RavenSecurityConstants.SESSION_KEY_PREFIX, validateCode);
+        sessionStrategy.setAttribute(new ServletWebRequest(request, response), RavenSecurityConstants.SESSION_KEY_PREFIX + "SMS", validateCode);
         // 发送
         this.mobileCodeSendService.send(mobile, validateCode.getCode());
     }
