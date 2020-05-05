@@ -73,7 +73,7 @@ public class RavenValidateCodeFilter extends OncePerRequestFilter implements Ini
             }
         }
 
-        // 继续方向
+        // 继续放行
         filterChain.doFilter(request, response);
     }
 
