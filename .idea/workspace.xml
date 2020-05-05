@@ -2,19 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenValidateCodeSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenMobileValidateCodeFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenFormAuthenticationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/enums/RavenValidateCodeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/processor/RavenValidateCodeProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenValidateCodeProcessorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenValidateCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/impl/DefaultRavenImageCodeProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/impl/DefaultRavenSessionValidateCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/impl/DefaultRavenSmsCodeProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/impl/abstractRavenValidateCodeProcessorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenBeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenBeanConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenValidateCodeSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/config/RavenValidateCodeSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/constants/RavenSecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/constants/RavenSecurityConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/controller/RavenValidateCodeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/controller/RavenValidateCodeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenMobileValidateCodeFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenValidateCodeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/filter/RavenValidateCodeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/pojo/RavenValidateCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/pojo/RavenValidateCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenMobileValidateCodeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenValidateCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/IRavenValidateCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/impl/DefaultRavenMobileValidateCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/impl/DefaultRavenMobileValidateCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/config/RavenBeanConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/config/RavenBeanConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/config/RavenValidateCodeSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/config/RavenValidateCodeSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/constants/RavenSecurityConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/constants/RavenSecurityConstants.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/controller/RavenValidateCodeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/controller/RavenValidateCodeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/mapper/IDemoUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/mapper/IDemoUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/filter/RavenMobileValidateCodeFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/filter/RavenValidateCodeFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/filter/RavenValidateCodeFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/pojo/RavenValidateCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/pojo/RavenValidateCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/service/IRavenMobileValidateCodeGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/service/IRavenValidateCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/service/IRavenValidateCodeGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/service/impl/DefaultRavenMobileValidateCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/service/impl/DefaultRavenMobileValidateCodeGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/service/impl/DefaultRavenValidateCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/service/impl/DefaultRavenValidateCodeGenerator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeSend.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoMobileCodeSend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/mapper/IDemoUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/mapper/IDemoUserMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoMobileCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoMobileCodeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoMobileCodeSend.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoMobileCodeSend.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoRavenValidateCodeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/service/impl/DemoRavenValidateCodeGenerator.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +48,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -72,10 +96,10 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.raven.core.config" />
+      <recent name="com.raven.core.validate.service.impl" />
+      <recent name="com.raven.core.validate.service" />
       <recent name="com.raven.core.validate.filter" />
       <recent name="com.raven.core.properties.validate" />
-      <recent name="com.raven.core.validate.service.impl" />
-      <recent name="com.raven.core.validate.pojo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/security-demo/src/main/resources" />
@@ -204,7 +228,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588492418035</updated>
       <workItem from="1588492422321" duration="42893000" />
-      <workItem from="1588578523270" duration="39174000" />
+      <workItem from="1588578523270" duration="54983000" />
     </task>
     <servers />
   </component>

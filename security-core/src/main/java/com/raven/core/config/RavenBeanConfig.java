@@ -2,18 +2,15 @@ package com.raven.core.config;
 
 import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.core.validate.service.IRavenMobileCodeSendService;
-import com.raven.core.validate.service.IRavenMobileValidateCodeGenerator;
 import com.raven.core.validate.service.IRavenValidateCodeGenerator;
-import com.raven.core.validate.service.impl.DefaultRavenMobileCodeSendServiceImpl;
-import com.raven.core.validate.service.impl.DefaultRavenMobileValidateCodeGenerator;
-import com.raven.core.validate.service.impl.DefaultRavenValidateCodeGenerator;
+import com.raven.core.validate.service.IRavenValidateCodeProcessorService;
+import com.raven.core.validate.service.impl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
 
 @Configuration
 public class RavenBeanConfig {
@@ -45,8 +42,8 @@ public class RavenBeanConfig {
      * 手机短信验证码生成器
      */
     @Bean
-    @ConditionalOnMissingBean(name = "mobileValidateCodeGenerator")
-    IRavenMobileValidateCodeGenerator mobileValidateCodeGenerator() {
+    @ConditionalOnMissingBean(name = "smsValidateCodeGenerator")
+    IRavenValidateCodeGenerator smsValidateCodeGenerator() {
         DefaultRavenMobileValidateCodeGenerator generator = new DefaultRavenMobileValidateCodeGenerator();
         generator.setSecurityProperties(this.securityProperties);
         return generator;
@@ -61,4 +58,25 @@ public class RavenBeanConfig {
         DefaultRavenMobileCodeSendServiceImpl mobileCodeSendImpl = new DefaultRavenMobileCodeSendServiceImpl();
         return mobileCodeSendImpl;
     }
+
+    /**
+     * 图形验证码处理器
+     */
+    @Bean
+    @ConditionalOnMissingBean(name = "imageValidateCodeProcessor")
+    IRavenValidateCodeProcessorService imageValidateCodeProcessor() {
+        DefaultRavenImageCodeProcessor generator = new DefaultRavenImageCodeProcessor();
+        return generator;
+    }
+
+    /**
+     * 手机短信验证码生成器
+     */
+    @Bean
+    @ConditionalOnMissingBean(name = "smsValidateCodeProcessor")
+    IRavenValidateCodeProcessorService smsValidateCodeProcessor() {
+        DefaultRavenSmsCodeProcessor generator = new DefaultRavenSmsCodeProcessor();
+        return generator;
+    }
+
 }

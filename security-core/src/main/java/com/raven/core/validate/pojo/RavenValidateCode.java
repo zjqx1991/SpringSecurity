@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 public class RavenValidateCode {
     private String code;
     private LocalDateTime expireTime;
+    private int expireIn = 60;
 
     public RavenValidateCode(String code, int expireIn) {
         this.code = code;

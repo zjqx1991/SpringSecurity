@@ -15,7 +15,14 @@ public interface RavenSecurityConstants {
     /**
      * 验证码处理器Bean后缀
      */
-    String VALIDATE_CODE_KEY_SUFFIX = "CodeGenerator";
+    String VALIDATE_CODE_PROCESSOR_KEY_SUFFIX = "ValidateCodeProcessor";
+
+
+    /**
+     * 验证码生成器Bean后缀
+     */
+    String VALIDATE_CODE_GENERATOR_KEY_SUFFIX = "ValidateCodeGenerator";
+
 
     /**
      * 验证码放入session时的前缀
@@ -25,7 +32,7 @@ public interface RavenSecurityConstants {
     /**
      * 默认的处理验证码的url前缀
      */
-    String DEFAULT_VALIDATE_CODE_URL_PREFIX = "/code";
+    String DEFAULT_VALIDATE_CODE_URL_PREFIX = "/code/";
     /**
      * 当请求需要身份认证时，默认跳转的url
      *

@@ -15,15 +15,15 @@ import javax.servlet.Filter;
  * @author zhailiang
  *
  */
-//@Component()
+@Component()
 public class RavenValidateCodeSecurityConfig extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {
 
     @Autowired
-    private Filter validateCodeFilter;
+    private Filter ravenValidateCodeFilter;
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-        http.addFilterBefore(validateCodeFilter, AbstractPreAuthenticatedProcessingFilter.class);
+        http.addFilterBefore(ravenValidateCodeFilter, AbstractPreAuthenticatedProcessingFilter.class);
     }
 
 }
