@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 80
   servlet:
     session:
       timeout: 10s
@@ -26,13 +26,14 @@ spring:
 #    config: classpath:log4j2-dev.xml
 
 mybatis:
-    configuration:
-      mapUnderscoreToCamelCase: true
+  configuration:
+    mapUnderscoreToCamelCase: true
 
 raven:
   security:
     browser:
-#      loginPage: /demo-login.html
+      signUpUrl: /demo-signUp.html
+      #      loginPage: /demo-login.html
       loginType: JSON
     validate:
       image:
@@ -40,13 +41,11 @@ raven:
         width: 100
         validateUrls:
           - /syslog
-          - /user/*
       mobile:
         count: 4
-
-#    social:
-#      qq:
-#        appId: 101386962
-#        appSecret: 2a0f820407df400b84a854d054be8b6a
-#        app-id: 100550231
-#        app-secret: 69b6ab57b22f3c2fe6a6149274e3295e
+    social:
+      qq:
+        appId: 100550231
+        appSecret: 69b6ab57b22f3c2fe6a6149274e3295e
+        filterProcessesUrl: /qqLogin
+        providerId: callback.do

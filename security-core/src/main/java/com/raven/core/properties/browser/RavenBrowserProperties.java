@@ -9,6 +9,7 @@ import lombok.Data;
 @Data
 public class RavenBrowserProperties {
     private String loginPage = "/bw-login.html";
+    private String signUpUrl = "/bw-signUp.html";
     private RavenLoginType loginType = RavenLoginType.JSON;
     private int tokenTime = 3600;
 }

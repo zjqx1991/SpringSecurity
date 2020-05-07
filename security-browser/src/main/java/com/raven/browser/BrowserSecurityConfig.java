@@ -18,6 +18,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 
 /**
@@ -47,6 +48,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     // 短信配置
     @Autowired
     private RavenMobileCodeAuthenticationSecurityConfig mobileCodeConfig;
+    // 社交配置
+    @Autowired
+    private SpringSocialConfigurer socialConfigurer;
 
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
@@ -61,6 +65,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
         // 配置登录界面
         String loginPage = this.securityProperties.getBrowser().getLoginPage();
         int tokenTime = this.securityProperties.getBrowser().getTokenTime();
+        String signUpUrl = this.securityProperties.getBrowser().getSignUpUrl();
 
         // 表单配置
         this.formAuthenticationConfig.configure(http);
@@ -68,6 +73,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
         http.apply(this.validateCodeSecurityConfig);
         // 短信配置
         http.apply(this.mobileCodeConfig);
+        // 社交配置
+        http.apply(this.socialConfigurer);
         http.csrf().disable();
         http.rememberMe()
                 .tokenRepository(persistentTokenRepository())
@@ -79,7 +86,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                         RavenSecurityConstants.DEFAULT_UNAUTHENTICATION_URL,
                         RavenSecurityConstants.DEFAULT_SIGN_IN_PROCESSING_URL_FORM,
                         loginPage,
-                        RavenSecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "*"
+                        RavenSecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "*",
+                        signUpUrl,
+                        "/user/regist"
                 ).permitAll()
                 .anyRequest()
                 .authenticated();

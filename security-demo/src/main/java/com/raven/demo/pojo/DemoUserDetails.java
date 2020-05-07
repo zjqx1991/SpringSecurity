@@ -9,6 +9,7 @@ import java.util.Collection;
 @Setter
 public class DemoUserDetails implements UserDetails {
 
+    private Long id;
     private String username;
     private String password;
     private int enabled;
@@ -41,5 +42,9 @@ public class DemoUserDetails implements UserDetails {
 
     public boolean isEnabled() {
         return this.enabled == 1;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

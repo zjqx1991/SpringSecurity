@@ -1,6 +1,7 @@
 package com.raven.core.properties;
 
 import com.raven.core.properties.browser.RavenBrowserProperties;
+import com.raven.core.properties.social.RavenSocialProperties;
 import com.raven.core.properties.validate.RavenValidateCodeProperties;
 import lombok.Getter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -15,5 +16,6 @@ public class RavenSecurityProperties {
     private RavenBrowserProperties browser = new RavenBrowserProperties();
     // 验证码相关配置
     private RavenValidateCodeProperties validate = new RavenValidateCodeProperties();
-
+    // 社交相关配置
+    private RavenSocialProperties social = new RavenSocialProperties();
 }

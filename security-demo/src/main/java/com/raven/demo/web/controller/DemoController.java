@@ -1,11 +1,30 @@
 package com.raven.demo.web.controller;
 
+import com.raven.demo.mapper.IDemoUserMapper;
+import com.raven.demo.pojo.DemoUserDetails;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.social.connect.web.ProviderSignInUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.ServletWebRequest;
+
+import javax.servlet.http.HttpServletRequest;
 
 @RestController
 public class DemoController {
+
+    @Autowired
+    private IDemoUserMapper userMapper;
+    @Autowired
+    private ProviderSignInUtils providerSignInUtils;
+
+    @PostMapping("/user/regist")
+    public void register(DemoUserDetails userDetails, HttpServletRequest request) {
+        DemoUserDetails details = this.userMapper.fetchUserInfoByUserName(userDetails.getUsername());
+        System.out.println("userDetails = " + userDetails);
+        this.providerSignInUtils.doPostSignUp("Raven", new ServletWebRequest(request));
+    }
 
     // 登录
 //    @PostMapping("/login")
