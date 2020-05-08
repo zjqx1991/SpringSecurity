@@ -11,5 +11,14 @@
 
     <artifactId>security-app</artifactId>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>com.raven</groupId>
+            <artifactId>security-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
 
 </project>

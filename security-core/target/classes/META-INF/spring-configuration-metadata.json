@@ -1,0 +1,11 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.raven.core.properties.RavenSecurityProperties",
+      "name": "raven.security",
+      "type": "com.raven.core.properties.RavenSecurityProperties"
+    }
+  ],
+  "properties": []
+}
