@@ -3,6 +3,8 @@ package com.raven.demo.web.controller;
 import com.raven.demo.mapper.IDemoUserMapper;
 import com.raven.demo.pojo.DemoUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.social.connect.web.ProviderSignInUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +26,13 @@ public class DemoController {
         DemoUserDetails details = this.userMapper.fetchUserInfoByUserName(userDetails.getUsername());
         System.out.println("userDetails = " + userDetails);
         this.providerSignInUtils.doPostSignUp("Raven", new ServletWebRequest(request));
+    }
+
+    @GetMapping("/me")
+    public Object getCurrentUser1() {
+        //方式1，直接从SecurityContextHolder中拿到Authentication对象
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        return authentication;
     }
 
     // 登录
