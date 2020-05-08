@@ -2,6 +2,7 @@ package com.raven.demo.service.impl;
 
 import com.raven.demo.mapper.IDemoUserMapper;
 import com.raven.demo.pojo.DemoUserDetails;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,16 +18,16 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
+@Slf4j
 public class DemoUserDetailsServiceImpl implements UserDetailsService, SocialUserDetailsService {
 
-    private Logger log = LoggerFactory.getLogger(getClass());
 
     @Autowired
     private IDemoUserMapper userMapper;
 
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        this.log.info("表单登录成功：" + username);
+        log.info("表单登录成功：" + username);
         return this.buildUserDetails(username);
     }
 
