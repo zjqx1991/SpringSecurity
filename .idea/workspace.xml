@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/service/impl/AppRedisValidateCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/social/weixin/RavenWeiXinProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/view/ImoocConnectView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/view/ImoocConnectionStatusView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/view/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/api/IRavenWeiXin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/api/RavenWeiXinImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/config/RavenWeixinAutoConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/connect/RavenWeiXinAccessGrant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/connect/RavenWeiXinAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/connect/RavenWeiXinConnectionFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/connect/RavenWeiXinOAuth2Template.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/connect/RavenWeiXinServiceProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/pojo/RavenWeiXinUserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/AppResourcesServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/AppResourcesServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/authentication/AppAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/authentication/AppAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/validate/RavenMobileValidateCodeProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/validate/RavenMobileValidateCodeProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/pojo/RavenValidateCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/pojo/RavenValidateCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/validate/service/impl/DefaultRavenSessionValidateCodeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/service/impl/BrowserSessionValidateCodeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/validate/RavenMobileValidateCodeProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/validate/RavenMobileValidateCodeProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/pojo/RavenValidateCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/pojo/RavenValidateCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/validate/service/impl/DefaultRavenSessionValidateCodeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/public/bw-login.html" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/public/bw-login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/social/RavenSocialProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/social/RavenSocialProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/social/qq/RavenQQProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/social/qq/RavenQQProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/RavenSocialConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/RavenSocialConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/qq/DemoConnectionSignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/qq/DemoConnectionSignUp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" afterDir="false" />
     </list>
@@ -61,7 +72,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/security-app/src/main/java/com/raven/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -74,18 +85,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.raven.core.social.wx.pojo" />
+      <recent name="com.raven.core.properties.social.weixin" />
       <recent name="com.raven.browser.service.impl" />
       <recent name="com.raven.core.social.qq.pojo" />
       <recent name="com.raven.core.config" />
-      <recent name="com.raven.core.validate.service.impl" />
-      <recent name="com.raven.core.validate.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social" />
+      <recent name="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx" />
       <recent name="$PROJECT_DIR$/security-app/src/main/java/com/raven/app" />
       <recent name="$PROJECT_DIR$/security-demo/src/main/resources/public" />
       <recent name="$PROJECT_DIR$/security-browser/src/main/resources/public" />
-      <recent name="$PROJECT_DIR$/security-demo/src/main/resources" />
-      <recent name="$PROJECT_DIR$/security-browser/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -210,7 +221,7 @@
       <updated>1588492418035</updated>
       <workItem from="1588492422321" duration="42893000" />
       <workItem from="1588578523270" duration="112155000" />
-      <workItem from="1588919165479" duration="30394000" />
+      <workItem from="1588919165479" duration="39722000" />
     </task>
     <servers />
   </component>
@@ -314,9 +325,29 @@
           <option name="timeStamp" value="201" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/controller/BrowserSecurityController.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="207" />
+          <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/social/spring-social-security/1.1.6.RELEASE/spring-social-security-1.1.6.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java</url>
+          <line>160</line>
+          <option name="timeStamp" value="237" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/social/spring-social-security/1.1.6.RELEASE/spring-social-security-1.1.6.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java</url>
+          <line>133</line>
+          <option name="timeStamp" value="238" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar:///usr/local/apache-maven-3.6.2/repository/org/springframework/social/spring-social-security/1.1.6.RELEASE/spring-social-security-1.1.6.RELEASE-sources.jar!/org/springframework/social/security/SocialAuthenticationFilter.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="239" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/qq/connect/RavenQQApiAdapter.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="243" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/qq/connect/RavenQQOAuth2Template.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="247" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -12,5 +12,4 @@ public class RavenQQProperties {
     private String providerId = "qq";
     private String appId;
     private String appSecret;
-    private String filterProcessesUrl = "/auth";
 }

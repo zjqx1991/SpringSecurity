@@ -46,11 +46,16 @@ raven:
       mobile:
         count: 4
     social:
+      filterProcessesUrl: /qqLogin
       qq:
         appId: 100550231
         appSecret: 69b6ab57b22f3c2fe6a6149274e3295e
-        filterProcessesUrl: /qqLogin
         providerId: callback.do
+      wx:
+        appId: wxd99431bbff8305a0
+        appSecret: 60f78681d063590a469f1b297feff3c4
+        providerId: weixin
+
 security:
   oauth2:
     client:

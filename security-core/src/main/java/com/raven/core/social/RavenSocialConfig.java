@@ -39,9 +39,13 @@ public class RavenSocialConfig extends SocialConfigurerAdapter {
         return repository;
     }
 
+    /**
+     * filterProcessesUrl: 告诉社交拦截器要拦截的 url
+     * signUpUrl: 告诉社交拦截器注册界面
+     */
     @Bean
     public SpringSocialConfigurer ravenSocialSecurityConfig() {
-        String filterProcessesUrl = this.securityProperties.getSocial().getQq().getFilterProcessesUrl();
+        String filterProcessesUrl = this.securityProperties.getSocial().getFilterProcessesUrl();
         String signUpUrl = this.securityProperties.getBrowser().getSignUpUrl();
         RavenSpringSocialConfigurer configurer = new RavenSpringSocialConfigurer(filterProcessesUrl);
         configurer.signupUrl(signUpUrl);
