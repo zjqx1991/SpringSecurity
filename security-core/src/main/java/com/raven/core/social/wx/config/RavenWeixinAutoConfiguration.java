@@ -6,7 +6,7 @@ package com.raven.core.social.wx.config;
 import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.core.properties.social.weixin.RavenWeiXinProperties;
 import com.raven.core.social.spring.SocialAutoConfigurerAdapter;
-import com.raven.core.social.view.ImoocConnectView;
+import com.raven.core.social.view.RavenConnectView;
 import com.raven.core.social.wx.connect.RavenWeiXinConnectionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -46,7 +46,7 @@ public class RavenWeixinAutoConfiguration extends SocialAutoConfigurerAdapter {
 	@Bean({"connect/weixinConnect", "connect/weixinConnected"})
 	@ConditionalOnMissingBean(name = "weixinConnectedView")
 	public View weixinConnectedView() {
-		return new ImoocConnectView();
+		return new RavenConnectView();
 	}
 
 }

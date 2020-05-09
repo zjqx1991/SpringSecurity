@@ -14,7 +14,7 @@ import java.util.Map;
  * @author zhailiang
  *
  */
-public class ImoocConnectView extends AbstractView {
+public class RavenConnectView extends AbstractView {
 
     /**
      * 社交账号绑定成功视图
