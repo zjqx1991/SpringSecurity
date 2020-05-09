@@ -16,6 +16,8 @@ spring:
     username: root
     password: admin
     driver-class-name: com.mysql.cj.jdbc.Driver
+#  redis:
+#    host: 123.57.102.7
 #  freemarker:
 #    cache: false # 缓存配置 开发阶段应该配置为false 因为经常会改
 #    suffix: .html # 模版后缀名 默认为ftl

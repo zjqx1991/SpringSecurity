@@ -1,8 +1,10 @@
 package com.raven.app;
 
 
+import com.raven.core.config.RavenValidateCodeSecurityConfig;
 import com.raven.core.constants.RavenSecurityConstants;
 import com.raven.core.properties.RavenSecurityProperties;
+import com.raven.core.validate.mobile.config.RavenMobileCodeAuthenticationSecurityConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,6 +12,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.social.security.SpringSocialConfigurer;
 
 /**
  * 资源服务器配置
@@ -24,6 +27,15 @@ public class AppResourcesServerConfig extends ResourceServerConfigurerAdapter {
     private AuthenticationSuccessHandler successHandler;
     @Autowired
     private AuthenticationFailureHandler failureHandler;
+    // 验证码配置
+    @Autowired
+    private RavenValidateCodeSecurityConfig validateCodeSecurityConfig;
+    // 短信配置
+    @Autowired
+    private RavenMobileCodeAuthenticationSecurityConfig mobileCodeConfig;
+    // 社交配置
+    @Autowired
+    private SpringSocialConfigurer socialConfigurer;
 
 
     @Override
@@ -42,11 +54,11 @@ public class AppResourcesServerConfig extends ResourceServerConfigurerAdapter {
                 .failureHandler(failureHandler);
 
         // 验证码配置
-//        http.apply(this.validateCodeSecurityConfig);
+        http.apply(this.validateCodeSecurityConfig);
         // 短信配置
-//        http.apply(this.mobileCodeConfig);
+        http.apply(this.mobileCodeConfig);
         // 社交配置
-//        http.apply(this.socialConfigurer);
+        http.apply(this.socialConfigurer);
         http.csrf().disable();
         http
                 .authorizeRequests()

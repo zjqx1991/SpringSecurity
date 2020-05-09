@@ -1,4 +1,4 @@
-package com.raven.core.validate.service.impl;
+package com.raven.browser.service.impl;
 
 import com.raven.core.constants.RavenSecurityConstants;
 import com.raven.core.enums.RavenValidateCodeType;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.ServletWebRequest;
 
 @Service
-public class DefaultRavenSessionValidateCodeRepository implements IRavenValidateCodeRepository {
+public class BrowserSessionValidateCodeRepository implements IRavenValidateCodeRepository {
 
 
     /**
@@ -19,17 +19,17 @@ public class DefaultRavenSessionValidateCodeRepository implements IRavenValidate
     private SessionStrategy sessionStrategy = new HttpSessionSessionStrategy();
 
 
-    @Override
+//    @Override
     public void save(ServletWebRequest request, RavenValidateCode code, RavenValidateCodeType validateCodeType) {
         sessionStrategy.setAttribute(request, getSessionKey(validateCodeType), code);
     }
 
-    @Override
+//    @Override
     public RavenValidateCode get(ServletWebRequest request, RavenValidateCodeType validateCodeType) {
         return (RavenValidateCode) sessionStrategy.getAttribute(request, getSessionKey(validateCodeType));
     }
 
-    @Override
+//    @Override
     public void remove(ServletWebRequest request, RavenValidateCodeType codeType) {
         sessionStrategy.removeAttribute(request, getSessionKey(codeType));
     }
