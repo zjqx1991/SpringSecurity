@@ -1,6 +1,7 @@
 package com.raven.app;
 
 
+import com.raven.app.social.openid.config.APPOpenIdAuthenticationSecurityConfig;
 import com.raven.core.config.RavenValidateCodeSecurityConfig;
 import com.raven.core.constants.RavenSecurityConstants;
 import com.raven.core.properties.RavenSecurityProperties;
@@ -36,6 +37,9 @@ public class AppResourcesServerConfig extends ResourceServerConfigurerAdapter {
     // 社交配置
     @Autowired
     private SpringSocialConfigurer socialConfigurer;
+    // openId
+    @Autowired
+    private APPOpenIdAuthenticationSecurityConfig openIdAuthenticationSecurityConfig;
 
 
     @Override
@@ -59,6 +63,8 @@ public class AppResourcesServerConfig extends ResourceServerConfigurerAdapter {
         http.apply(this.mobileCodeConfig);
         // 社交配置
         http.apply(this.socialConfigurer);
+        // openId
+        http.apply(this.openIdAuthenticationSecurityConfig);
         http.csrf().disable();
         http
                 .authorizeRequests()
