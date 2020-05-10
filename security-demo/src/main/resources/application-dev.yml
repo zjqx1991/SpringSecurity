@@ -2,7 +2,7 @@ server:
   port: 80
   servlet:
     session:
-      timeout: 10s
+      timeout: 600
       cookie:
         http-only: true
         secure: false

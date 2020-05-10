@@ -6,7 +6,6 @@ import com.raven.core.config.RavenFormAuthenticationConfig;
 import com.raven.core.config.RavenValidateCodeSecurityConfig;
 import com.raven.core.constants.RavenSecurityConstants;
 import com.raven.core.properties.RavenSecurityProperties;
-import com.raven.core.validate.filter.RavenValidateCodeFilter;
 import com.raven.core.validate.mobile.config.RavenMobileCodeAuthenticationSecurityConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+import org.springframework.security.web.session.InvalidSessionStrategy;
+import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 import org.springframework.social.security.SpringSocialConfigurer;
 
 
@@ -51,6 +52,10 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     // 社交配置
     @Autowired
     private SpringSocialConfigurer socialConfigurer;
+    @Autowired
+    private SessionInformationExpiredStrategy sessionInformation;
+    @Autowired
+    private InvalidSessionStrategy invalidSession;
 
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
@@ -81,6 +86,13 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .tokenValiditySeconds(tokenTime)
                 .userDetailsService(this.userDetailsService)
                 .and()
+                .sessionManagement()
+                .invalidSessionStrategy(this.invalidSession)
+                .maximumSessions(this.securityProperties.getBrowser().getSession().getMaximumSessions())
+                .maxSessionsPreventsLogin(this.securityProperties.getBrowser().getSession().isMaxSessionsPreventsLogin())
+                .expiredSessionStrategy(this.sessionInformation)
+                .and()
+                .and()
                 .authorizeRequests()
                 .antMatchers(
                         RavenSecurityConstants.DEFAULT_UNAUTHENTICATION_URL,
@@ -88,7 +100,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                         loginPage,
                         RavenSecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "*",
                         signUpUrl,
-                        "/user/regist"
+                        "/user/regist",
+                        "/session/invalid"
                 ).permitAll()
                 .anyRequest()
                 .authenticated();

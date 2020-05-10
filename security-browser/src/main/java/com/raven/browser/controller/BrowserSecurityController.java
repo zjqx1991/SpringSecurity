@@ -1,6 +1,7 @@
 package com.raven.browser.controller;
 
 import com.raven.browser.pojo.BrowserSocialUserInfo;
+import com.raven.core.constants.RavenSecurityConstants;
 import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.core.response.RavenR;
 import lombok.extern.slf4j.Slf4j;
@@ -52,7 +53,7 @@ public class BrowserSecurityController {
      * @return
      * @throws IOException
      */
-    @RequestMapping("/authentication/require")
+    @RequestMapping(RavenSecurityConstants.DEFAULT_SESSION_INVALID_URL)
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
     public RavenR requireAuthentication(HttpServletRequest request, HttpServletResponse response)
             throws IOException {
@@ -73,7 +74,7 @@ public class BrowserSecurityController {
     }
 
 
-    @GetMapping("/social/user")
+    @GetMapping(RavenSecurityConstants.DEFAULT_SOCIAL_USER_INFO_URL)
     public BrowserSocialUserInfo getSocialUserInfo(HttpServletRequest request) {
         BrowserSocialUserInfo userInfo = new BrowserSocialUserInfo();
         Connection<?> connection = this.providerSignInUtils.getConnectionFromSession(new ServletWebRequest(request));
@@ -83,6 +84,13 @@ public class BrowserSecurityController {
         userInfo.setNickName(connection.getDisplayName());
         userInfo.setHeadImg(connection.getImageUrl());
         return null;
+    }
+
+
+    @GetMapping("/session/invalid")
+    @ResponseStatus(code = HttpStatus.UNAUTHORIZED)
+    public RavenR invalidSession() {
+        return new RavenR("Session 失效");
     }
 
 }

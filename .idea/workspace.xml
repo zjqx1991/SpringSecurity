@@ -2,11 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-banding.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/config/BrowserSecurityBeanConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/session/RavenAbstractSessionStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/session/RavenExpiredSessionStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/session/RavenInvalidSessionStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-session-invalid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/session/RavenSessionProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/view/ImoocConnectView.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/view/RavenConnectView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/view/ImoocConnectionStatusView.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/view/RavenConnectionStatusView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/config/RavenWeixinAutoConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx/config/RavenWeixinAutoConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/controller/BrowserSecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/controller/BrowserSecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/controller/BrowserSecurityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/controller/BrowserSecurityController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/constants/RavenSecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/constants/RavenSecurityConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/RavenSecurityProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/RavenSecurityProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/browser/RavenBrowserProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/browser/RavenBrowserProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/constants/RavenSecurityConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/constants/RavenSecurityConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/RavenSecurityProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/RavenSecurityProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/browser/RavenBrowserProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/browser/RavenBrowserProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/pojo/DemoUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/pojo/DemoUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/pojo/DemoUserDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/pojo/DemoUserDetails.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +71,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/security-browser/src/main/resources/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/session" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -67,18 +84,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.raven.browser.config" />
+      <recent name="com.raven.core.session" />
       <recent name="com.raven.core.social.wx.pojo" />
       <recent name="com.raven.core.properties.social.weixin" />
       <recent name="com.raven.browser.service.impl" />
-      <recent name="com.raven.core.social.qq.pojo" />
-      <recent name="com.raven.core.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/session" />
       <recent name="$PROJECT_DIR$/security-browser/src/main/resources/public" />
       <recent name="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social" />
       <recent name="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/wx" />
       <recent name="$PROJECT_DIR$/security-app/src/main/java/com/raven/app" />
-      <recent name="$PROJECT_DIR$/security-demo/src/main/resources/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -203,7 +220,7 @@
       <updated>1588492418035</updated>
       <workItem from="1588492422321" duration="42893000" />
       <workItem from="1588578523270" duration="112155000" />
-      <workItem from="1588919165479" duration="43182000" />
+      <workItem from="1588919165479" duration="57549000" />
     </task>
     <servers />
   </component>
@@ -273,7 +290,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/controller/BrowserSecurityController.java</url>
-          <line>77</line>
+          <line>78</line>
           <option name="timeStamp" value="187" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

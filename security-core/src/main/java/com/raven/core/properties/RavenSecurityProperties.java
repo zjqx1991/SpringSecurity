@@ -1,6 +1,7 @@
 package com.raven.core.properties;
 
 import com.raven.core.properties.browser.RavenBrowserProperties;
+import com.raven.core.properties.session.RavenSessionProperties;
 import com.raven.core.properties.social.RavenSocialProperties;
 import com.raven.core.properties.validate.RavenValidateCodeProperties;
 import lombok.Getter;

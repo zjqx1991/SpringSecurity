@@ -5,6 +5,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.Objects;
 
 @Setter
 public class DemoUserDetails implements UserDetails {
@@ -46,5 +47,20 @@ public class DemoUserDetails implements UserDetails {
 
     public Long getId() {
         return id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj.toString().equals(this.toString());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.username.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return this.username;
     }
 }
