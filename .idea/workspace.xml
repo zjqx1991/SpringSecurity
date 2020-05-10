@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/logout/BrowserLogoutSuccessHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-signIn.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-demo/src/main/resources/public/demo-logout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/config/BrowserSecurityBeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/config/BrowserSecurityBeanConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-session-invalid.html" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/resources/public/bw-session-invalid.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/public/bw-session-invalid.html" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/public/bw-session-invalid.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/browser/RavenBrowserProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/browser/RavenBrowserProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/browser/RavenBrowserProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/browser/RavenBrowserProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +202,7 @@
       <updated>1588492418035</updated>
       <workItem from="1588492422321" duration="42893000" />
       <workItem from="1588578523270" duration="112155000" />
-      <workItem from="1588919165479" duration="61071000" />
+      <workItem from="1588919165479" duration="62543000" />
     </task>
     <servers />
   </component>
