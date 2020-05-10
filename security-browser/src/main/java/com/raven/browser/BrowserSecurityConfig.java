@@ -15,6 +15,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.session.InvalidSessionStrategy;
@@ -56,6 +57,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     private SessionInformationExpiredStrategy sessionInformation;
     @Autowired
     private InvalidSessionStrategy invalidSession;
+    /**退出成功处理器*/
+    @Autowired
+    private LogoutSuccessHandler logoutSuccessHandler;
 
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
@@ -71,6 +75,10 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
         String loginPage = this.securityProperties.getBrowser().getLoginPage();
         int tokenTime = this.securityProperties.getBrowser().getTokenTime();
         String signUpUrl = this.securityProperties.getBrowser().getSignUpUrl();
+        //session失效默认的跳转地址
+        String sessionInvalidUrl = this.securityProperties.getBrowser().getSession().getSessionInvalidUrl();
+        //推出登录默认的跳转地址
+        String signOutUrl = this.securityProperties.getBrowser().getSignOutUrl();
 
         // 表单配置
         this.formAuthenticationConfig.configure(http);
@@ -93,6 +101,17 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .expiredSessionStrategy(this.sessionInformation)
                 .and()
                 .and()
+                //退出登陆相关的逻辑
+                .logout()
+                //自定义退出的url---默认的为/logout
+                .logoutUrl("/logout")
+                //自定义退出成功处理器
+                .logoutSuccessHandler(logoutSuccessHandler)
+                //自定义退出成功后跳转的url与logoutSuccessHandler互斥
+                //.logoutSuccessUrl("/index")
+                //指定退出成功后删除的cookie
+                .deleteCookies("JSESSIONID")
+                .and()
                 .authorizeRequests()
                 .antMatchers(
                         RavenSecurityConstants.DEFAULT_UNAUTHENTICATION_URL,
@@ -100,8 +119,10 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                         loginPage,
                         RavenSecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "*",
                         signUpUrl,
-                        "/user/regist",
-                        "/session/invalid"
+                        sessionInvalidUrl,
+                        signOutUrl,
+                        "/user/regist"
+
                 ).permitAll()
                 .anyRequest()
                 .authenticated();

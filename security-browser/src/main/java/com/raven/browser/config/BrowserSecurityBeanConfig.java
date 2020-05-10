@@ -3,6 +3,7 @@
  */
 package com.raven.browser.config;
 
+import com.raven.browser.logout.BrowserLogoutSuccessHandler;
 import com.raven.browser.session.RavenExpiredSessionStrategy;
 import com.raven.browser.session.RavenInvalidSessionStrategy;
 import com.raven.core.properties.RavenSecurityProperties;
@@ -10,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.security.web.session.InvalidSessionStrategy;
 import org.springframework.security.web.session.SessionInformationExpiredStrategy;
 
@@ -53,10 +55,10 @@ public class BrowserSecurityBeanConfig {
 	 *
 	 * @return
 	 */
-//	@Bean
-//	@ConditionalOnMissingBean(LogoutSuccessHandler.class)
-//	public LogoutSuccessHandler logoutSuccessHandler(){
-//		return new ImoocLogoutSuccessHandler(securityProperties.getBrowser().getSignOutUrl());
-//	}
+	@Bean
+	@ConditionalOnMissingBean(LogoutSuccessHandler.class)
+	public LogoutSuccessHandler logoutSuccessHandler(){
+		return new BrowserLogoutSuccessHandler(this.securityProperties);
+	}
 
 }

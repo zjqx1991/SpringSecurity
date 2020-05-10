@@ -14,7 +14,7 @@ public class RavenBrowserProperties {
     private String loginPage = "/bw-login.html";
     private String signUpUrl = "/bw-signUp.html";
     private String signInPage = "/bw-signUp.html";
-    private String signOutUrl = "/bw-signUp.html";
+    private String signOutUrl = "/bw-logout.html";
     private RavenLoginType loginType = RavenLoginType.JSON;
     private int tokenTime = 3600;
 }

@@ -39,6 +39,7 @@ raven:
       signUpUrl: /demo-signUp.html
       #      loginPage: /demo-login.html
       loginType: JSON
+      signOutUrl: /demo-logout.html
     validate:
       image:
         count: 3
