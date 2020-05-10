@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 8001
   servlet:
     session:
       timeout: 600
@@ -8,6 +8,8 @@ server:
         secure: false
 
 spring:
+  session:
+    store-type: redis
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
