@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppAuthorizationServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppTokenStoreConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppWebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/oauth2/RavenOAuth2Properties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/oauth2/client/RavenOAuth2ClientProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/jwt/AppJwtTokenEnhancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/authorize/IRavenAuthorizeConfigManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/authorize/IRavenAuthorizeConfigProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/authorize/impl/RavenAuthorizeConfigManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/authorize/impl/RavenAuthorizeConfigProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/service/impl/DemoAuthorizeConfigProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/AppAuthorizationServerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/AppResourcesServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppResourcesServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/RavenSecurityProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/RavenSecurityProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/RavenSecurityProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/properties/RavenSecurityProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppAuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppAuthorizationServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppResourcesServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppResourcesServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppTokenStoreConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/config/AppTokenStoreConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/BrowserSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/controller/BrowserSecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/src/main/java/com/raven/browser/controller/BrowserSecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/BrowserSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/controller/BrowserSecurityController.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-browser/target/classes/com/raven/browser/controller/BrowserSecurityController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/oauth2/RavenOAuth2Properties.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/properties/oauth2/RavenOAuth2Properties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/RavenSocialConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/RavenSocialConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/web/controller/DemoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/com/raven/demo/web/controller/DemoController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,11 +81,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.raven.core.authorize" />
       <recent name="com.raven.core.properties.oauth2" />
       <recent name="com.raven.app.exception" />
       <recent name="com.raven.app.utils" />
       <recent name="com.raven.app.controller" />
-      <recent name="com.raven.app.service.impl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/security-demo/src/main/resources/public" />
@@ -213,7 +218,7 @@
       <workItem from="1588492422321" duration="42893000" />
       <workItem from="1588578523270" duration="112155000" />
       <workItem from="1588919165479" duration="70079000" />
-      <workItem from="1589153592637" duration="15067000" />
+      <workItem from="1589153592637" duration="25979000" />
     </task>
     <servers />
   </component>
@@ -268,7 +273,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java</url>
-          <line>46</line>
+          <line>54</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -335,6 +340,21 @@
           <url>file://$PROJECT_DIR$/security-app/src/main/java/com/raven/app/social/openid/APPOpenIdAuthenticationProvider.java</url>
           <line>36</line>
           <option name="timeStamp" value="268" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="271" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="272" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security-demo/src/main/java/com/raven/demo/web/controller/DemoController.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="273" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

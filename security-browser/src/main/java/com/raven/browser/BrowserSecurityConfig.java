@@ -2,6 +2,7 @@ package com.raven.browser;
 
 import com.raven.browser.authentication.BrowserAuthenticationFailureHandler;
 import com.raven.browser.authentication.BrowserAuthenticationSuccessHandler;
+import com.raven.core.authorize.IRavenAuthorizeConfigManager;
 import com.raven.core.config.RavenFormAuthenticationConfig;
 import com.raven.core.config.RavenValidateCodeSecurityConfig;
 import com.raven.core.constants.RavenSecurityConstants;
@@ -57,9 +58,13 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     private SessionInformationExpiredStrategy sessionInformation;
     @Autowired
     private InvalidSessionStrategy invalidSession;
-    /**退出成功处理器*/
+    /**
+     * 退出成功处理器
+     */
     @Autowired
     private LogoutSuccessHandler logoutSuccessHandler;
+    @Autowired
+    private IRavenAuthorizeConfigManager authorizeConfigManager;
 
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
@@ -72,13 +77,7 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // 配置登录界面
-        String loginPage = this.securityProperties.getBrowser().getLoginPage();
         int tokenTime = this.securityProperties.getBrowser().getTokenTime();
-        String signUpUrl = this.securityProperties.getBrowser().getSignUpUrl();
-        //session失效默认的跳转地址
-        String sessionInvalidUrl = this.securityProperties.getBrowser().getSession().getSessionInvalidUrl();
-        //推出登录默认的跳转地址
-        String signOutUrl = this.securityProperties.getBrowser().getSignOutUrl();
 
         // 表单配置
         this.formAuthenticationConfig.configure(http);
@@ -112,20 +111,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 //指定退出成功后删除的cookie
                 .deleteCookies("JSESSIONID")
                 .and()
-                .authorizeRequests()
-                .antMatchers(
-                        RavenSecurityConstants.DEFAULT_UNAUTHENTICATION_URL,
-                        RavenSecurityConstants.DEFAULT_SIGN_IN_PROCESSING_URL_FORM,
-                        loginPage,
-                        RavenSecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "*",
-                        signUpUrl,
-                        sessionInvalidUrl,
-                        signOutUrl,
-                        "/user/regist"
-
-                ).permitAll()
-                .anyRequest()
-                .authenticated();
+                .authorizeRequests();
+        this.authorizeConfigManager.config(http.authorizeRequests());
     }
 
     @Override

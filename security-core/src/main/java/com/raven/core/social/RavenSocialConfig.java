@@ -26,7 +26,7 @@ public class RavenSocialConfig extends SocialConfigurerAdapter {
     private RavenSecurityProperties securityProperties;
     @Autowired(required = false)
     private ConnectionSignUp connectionSignUp;
-    @Autowired
+    @Autowired(required = false)
     private IRavenSocialAuthenticationFilterPostProcessor postProcessor;
 
     @Override

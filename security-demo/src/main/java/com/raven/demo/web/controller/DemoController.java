@@ -1,8 +1,12 @@
 package com.raven.demo.web.controller;
 
-import com.raven.app.utils.AppSignUpUtils;
+import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.demo.mapper.IDemoUserMapper;
 import com.raven.demo.pojo.DemoUserDetails;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -14,23 +18,27 @@ import org.springframework.web.context.request.ServletWebRequest;
 
 import javax.servlet.http.HttpServletRequest;
 
+
+@Slf4j
 @RestController
 public class DemoController {
 
     @Autowired
     private IDemoUserMapper userMapper;
-//    @Autowired
-//    private ProviderSignInUtils providerSignInUtils;
-
     @Autowired
-    private AppSignUpUtils appSignUpUtils;
+    private ProviderSignInUtils providerSignInUtils;
+//    @Autowired
+//    private AppSignUpUtils appSignUpUtils;
+    @Autowired
+    private RavenSecurityProperties securityProperties;
+
 
     @PostMapping("/user/regist")
     public void register(DemoUserDetails userDetails, HttpServletRequest request) {
         DemoUserDetails details = this.userMapper.fetchUserInfoByUserName(userDetails.getUsername());
         System.out.println("userDetails = " + userDetails);
-//        this.providerSignInUtils.doPostSignUp("Raven", new ServletWebRequest(request));
-        this.appSignUpUtils.doPostSignUp(new ServletWebRequest(request), "Raven");
+        this.providerSignInUtils.doPostSignUp("Raven", new ServletWebRequest(request));
+//        this.appSignUpUtils.doPostSignUp(new ServletWebRequest(request), "Raven");
 
     }
 
@@ -49,7 +57,14 @@ public class DemoController {
 
     // 登录成功之后的首页
     @GetMapping("/index")
-    public String index() {
+    public String index(Authentication auth, HttpServletRequest request) throws Exception {
+//        String signingKey = this.securityProperties.getOauth2().getSigningKey();
+//        String header = request.getHeader("Authorization");
+//        String token = StringUtils.substringAfter(header, "Bearer ");
+//        Claims claims = Jwts.parser().setSigningKey(signingKey.getBytes("UTF-8")).parseClaimsJws(token).getBody();
+//
+//        String company = (String) claims.get("company");
+//        log.info(company);
         return "index";
     }
 

@@ -2,6 +2,7 @@ package com.raven.app.config;
 
 
 import com.raven.app.social.openid.config.APPOpenIdAuthenticationSecurityConfig;
+import com.raven.core.authorize.IRavenAuthorizeConfigManager;
 import com.raven.core.config.RavenValidateCodeSecurityConfig;
 import com.raven.core.constants.RavenSecurityConstants;
 import com.raven.core.properties.RavenSecurityProperties;
@@ -40,7 +41,8 @@ public class AppResourcesServerConfig extends ResourceServerConfigurerAdapter {
     // openId
     @Autowired
     private APPOpenIdAuthenticationSecurityConfig openIdAuthenticationSecurityConfig;
-
+    @Autowired
+    private IRavenAuthorizeConfigManager authorizeConfigManager;
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
@@ -66,17 +68,6 @@ public class AppResourcesServerConfig extends ResourceServerConfigurerAdapter {
         // openId
         http.apply(this.openIdAuthenticationSecurityConfig);
         http.csrf().disable();
-        http
-                .authorizeRequests()
-                .antMatchers(
-                        RavenSecurityConstants.DEFAULT_UNAUTHENTICATION_URL,
-                        RavenSecurityConstants.DEFAULT_SIGN_IN_PROCESSING_URL_FORM,
-                        loginPage,
-                        RavenSecurityConstants.DEFAULT_VALIDATE_CODE_URL_PREFIX + "*",
-                        signUpUrl,
-                        "/user/regist"
-                ).permitAll()
-                .anyRequest()
-                .authenticated();
+        this.authorizeConfigManager.config(http.authorizeRequests());
     }
 }

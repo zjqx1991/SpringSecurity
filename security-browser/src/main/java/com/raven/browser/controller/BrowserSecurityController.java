@@ -1,7 +1,7 @@
 package com.raven.browser.controller;
 
-import com.raven.core.pojo.BrowserSocialUserInfo;
 import com.raven.core.constants.RavenSecurityConstants;
+import com.raven.core.pojo.RavenSocialUserInfo;
 import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.core.response.RavenR;
 import lombok.extern.slf4j.Slf4j;
@@ -73,8 +73,8 @@ public class BrowserSecurityController {
 
 
     @GetMapping(RavenSecurityConstants.DEFAULT_SOCIAL_USER_INFO_URL)
-    public BrowserSocialUserInfo getSocialUserInfo(HttpServletRequest request) {
-        BrowserSocialUserInfo userInfo = new BrowserSocialUserInfo();
+    public RavenSocialUserInfo getSocialUserInfo(HttpServletRequest request) {
+        RavenSocialUserInfo userInfo = new RavenSocialUserInfo();
         Connection<?> connection = this.providerSignInUtils.getConnectionFromSession(new ServletWebRequest(request));
         ConnectionKey connectionKey = connection.getKey();
         userInfo.setProviderId(connectionKey.getProviderId());
