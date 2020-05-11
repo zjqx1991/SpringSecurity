@@ -1,6 +1,7 @@
 package com.raven.core.properties;
 
 import com.raven.core.properties.browser.RavenBrowserProperties;
+import com.raven.core.properties.oauth2.RavenOAuth2Properties;
 import com.raven.core.properties.session.RavenSessionProperties;
 import com.raven.core.properties.social.RavenSocialProperties;
 import com.raven.core.properties.validate.RavenValidateCodeProperties;
@@ -19,4 +20,6 @@ public class RavenSecurityProperties {
     private RavenValidateCodeProperties validate = new RavenValidateCodeProperties();
     // 社交相关配置
     private RavenSocialProperties social = new RavenSocialProperties();
+    // OAuth2相关配置
+    private RavenOAuth2Properties oauth2 = new RavenOAuth2Properties();
 }

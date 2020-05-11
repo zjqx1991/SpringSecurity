@@ -1,4 +1,4 @@
-package com.raven.app;
+package com.raven.app.config;
 
 
 import com.raven.app.social.openid.config.APPOpenIdAuthenticationSecurityConfig;

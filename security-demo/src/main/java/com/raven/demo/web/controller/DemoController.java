@@ -19,10 +19,10 @@ public class DemoController {
 
     @Autowired
     private IDemoUserMapper userMapper;
-    @Autowired
-    private ProviderSignInUtils providerSignInUtils;
+//    @Autowired
+//    private ProviderSignInUtils providerSignInUtils;
 
-    @Autowired 
+    @Autowired
     private AppSignUpUtils appSignUpUtils;
 
     @PostMapping("/user/regist")
