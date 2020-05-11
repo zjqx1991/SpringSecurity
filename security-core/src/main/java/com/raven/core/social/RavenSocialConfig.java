@@ -2,7 +2,7 @@ package com.raven.core.social;
 
 import com.raven.core.properties.RavenSecurityProperties;
 import com.raven.core.social.jdbc.RavenJdbcUsersConnectionRepository;
-import com.raven.core.social.qq.config.RavenSpringSocialConfigurer;
+import com.raven.core.social.service.IRavenSocialAuthenticationFilterPostProcessor;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,6 @@ import org.springframework.social.config.annotation.SocialConfigurerAdapter;
 import org.springframework.social.connect.ConnectionFactoryLocator;
 import org.springframework.social.connect.ConnectionSignUp;
 import org.springframework.social.connect.UsersConnectionRepository;
-import org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository;
 import org.springframework.social.connect.web.ProviderSignInUtils;
 import org.springframework.social.security.SpringSocialConfigurer;
 
@@ -27,6 +26,8 @@ public class RavenSocialConfig extends SocialConfigurerAdapter {
     private RavenSecurityProperties securityProperties;
     @Autowired(required = false)
     private ConnectionSignUp connectionSignUp;
+    @Autowired
+    private IRavenSocialAuthenticationFilterPostProcessor postProcessor;
 
     @Override
     public UsersConnectionRepository getUsersConnectionRepository(ConnectionFactoryLocator connectionFactoryLocator) {
@@ -49,6 +50,7 @@ public class RavenSocialConfig extends SocialConfigurerAdapter {
         String signUpUrl = this.securityProperties.getBrowser().getSignUpUrl();
         RavenSpringSocialConfigurer configurer = new RavenSpringSocialConfigurer(filterProcessesUrl);
         configurer.signupUrl(signUpUrl);
+        configurer.setPostProcessor(this.postProcessor);
         return configurer;
     }
 

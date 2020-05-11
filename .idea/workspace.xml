@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d5fad2-522e-4091-ab29-4b554b490bd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/social/openid/APPOpenIdAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/social/openid/APPOpenIdAuthenticationProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/social/openid/APPOpenIdAuthenticationToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/social/openid/config/APPOpenIdAuthenticationSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/service/impl/AppSocialAuthenticationFilterPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/service/IRavenSocialAuthenticationFilterPostProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/AppResourcesServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-app/src/main/java/com/raven/app/AppResourcesServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/constants/RavenSecurityConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/constants/RavenSecurityConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/constants/RavenSecurityConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/target/classes/com/raven/core/constants/RavenSecurityConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security-demo/target/classes/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/RavenSocialConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/RavenSocialConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/qq/config/RavenSpringSocialConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/RavenSpringSocialConfigurer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +204,7 @@
       <workItem from="1588492422321" duration="42893000" />
       <workItem from="1588578523270" duration="112155000" />
       <workItem from="1588919165479" duration="70079000" />
-      <workItem from="1589153592637" duration="1248000" />
+      <workItem from="1589153592637" duration="3807000" />
     </task>
     <servers />
   </component>
@@ -318,11 +313,6 @@
           <option name="timeStamp" value="239" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/qq/connect/RavenQQApiAdapter.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="243" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/qq/connect/RavenQQOAuth2Template.java</url>
           <line>38</line>
           <option name="timeStamp" value="247" />
@@ -331,16 +321,6 @@
           <url>file://$PROJECT_DIR$/security-app/src/main/java/com/raven/app/social/openid/APPOpenIdAuthenticationProvider.java</url>
           <line>32</line>
           <option name="timeStamp" value="262" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/jdbc/RavenJdbcUsersConnectionRepository.java</url>
-          <line>99</line>
-          <option name="timeStamp" value="264" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/security-core/src/main/java/com/raven/core/social/jdbc/RavenJdbcUsersConnectionRepository.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="265" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/security-app/src/main/java/com/raven/app/social/openid/APPOpenIdAuthenticationProvider.java</url>
