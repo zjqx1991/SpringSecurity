@@ -1,5 +1,6 @@
 package com.raven.demo.web.controller;
 
+import com.raven.app.utils.AppSignUpUtils;
 import com.raven.demo.mapper.IDemoUserMapper;
 import com.raven.demo.pojo.DemoUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,16 @@ public class DemoController {
     @Autowired
     private ProviderSignInUtils providerSignInUtils;
 
+    @Autowired 
+    private AppSignUpUtils appSignUpUtils;
+
     @PostMapping("/user/regist")
     public void register(DemoUserDetails userDetails, HttpServletRequest request) {
         DemoUserDetails details = this.userMapper.fetchUserInfoByUserName(userDetails.getUsername());
         System.out.println("userDetails = " + userDetails);
-        this.providerSignInUtils.doPostSignUp("Raven", new ServletWebRequest(request));
+//        this.providerSignInUtils.doPostSignUp("Raven", new ServletWebRequest(request));
+        this.appSignUpUtils.doPostSignUp(new ServletWebRequest(request), "Raven");
+
     }
 
     @GetMapping("/me")

@@ -1,4 +1,4 @@
-package com.raven.browser.pojo;
+package com.raven.core.pojo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public class BrowserSocialUserInfo {
+public class RavenSocialUserInfo {
     private String providerId;
     private String providerUserId;
     private String nickName;
